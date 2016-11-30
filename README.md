@@ -1,4 +1,4 @@
-# BudgieApp
+# BudgieApp2.0
 CSE337 Group Project
 
 1) Create an account on github
