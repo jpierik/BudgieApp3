@@ -8,7 +8,7 @@ CSE337 Group Project
 3) In the shell use the command: git clone https://github.com/jpierik/BudgieApp.git
 Make sure you are currently in the folder in the shell that you want this to be cloned too
 
-4) the current working branch is BudgieApp
+4) the current working branch is budgieBranch
 
 5) If you do any work on this please commit often.
 
