@@ -22,7 +22,7 @@ public class BudgieTest {
         info.getInputInfo();
         if (info.flag == true){
             infoSummary.setVisible(true);
-            //info.infoUI.setVisible(false);
+            info.infoUI.setVisible(false);
             infoSummary.jLabelTotalIncome.setText("$" + info.yearlyIncomeStr);
             infoSummary.jLabelTotalMonthlyExpense.setText("$" + info.totalMonthlyExpenseStr);
             infoSummary.jLabelTotalYearlyExpense.setText("$" + info.totalYearlyExpenseStr);

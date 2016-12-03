@@ -40,17 +40,12 @@ public class EnterFinancialInfo extends FinancialInfoUI{
             //convert strings to numbers   
             //monthlyBillsStr = infoUI.textBills;
             while(errorTrap == false){
+                
                 try{
                 income = Float.valueOf(infoUI.textIncome);
                 bills = Float.valueOf(infoUI.textBills);
                 otherExpense = Float.valueOf(infoUI.textOtherExpense);
                 livingExpense = Float.valueOf(infoUI.textLivingExpense);
-                }
-                catch(Exception e){
-                    System.out.println("Please enter a numerical value");
-                    infoUI.notificationLabel.setText("Please enter a numerical value.");
-                    infoUI.submitBool = false;
-                }
                 if(income < 0 || bills < 0 || otherExpense < 0 || livingExpense < 0){
                     System.out.println("no negatives");
                     infoUI.notificationLabel.setText("The entered value is negative. Please enter a new value.");
@@ -61,8 +56,16 @@ public class EnterFinancialInfo extends FinancialInfoUI{
                     infoUI.notificationLabel.setText("The entered value is too high. Please enter a new value");
                     infoUI.submitBool = false;
                 }
-                else
+                else if(income >= 0 || bills >= 0 || otherExpense >= 0 || livingExpense >= 0){
                     errorTrap = true;
+                }
+                }
+                catch(Exception e){
+                    System.out.println("Please enter a numerical value");
+                    infoUI.notificationLabel.setText("Please enter a numerical value.");
+                    infoUI.submitBool = false;
+                }
+                
             }
             
             //simple calulations for financial info

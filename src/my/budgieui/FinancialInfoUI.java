@@ -41,6 +41,10 @@ public class FinancialInfoUI extends javax.swing.JFrame {
         textFieldEnterIncome.setBackground(Color.white);
         textFieldEnterLivingExpense.setBackground(Color.white);
         textFieldEnterOtherExpense.setBackground(Color.white);
+        userMonthlyBills.setText("0");
+        userMonthlyLivingExpense.setText("0");
+        userMonthlyIncome.setText("0");
+        userMonthlyOtherExpense.setText("0");
         
         
     }
