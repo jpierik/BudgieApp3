@@ -26,7 +26,7 @@ public class LoanCalcUI extends javax.swing.JFrame {
         budgieTitle2.setBackground(Color.white);
         textFieldEnterInterest.setBackground(Color.white);
         textFieldEnterLoanAmount.setBackground(Color.white);
-        textFieldLoanType.setBackground(Color.white);
+        
         textFieldLoanDuration.setBackground(Color.white);
         textFieldLoanWithInterest.setBackground(Color.white);
         textFieldMonthly.setBackground(Color.white);
@@ -37,7 +37,7 @@ public class LoanCalcUI extends javax.swing.JFrame {
         textFieldLoanWithInterest.setEditable(false);
         textFieldMonthly.setEditable(false);
         textFieldLoanDuration.setEditable(false);
-        textFieldLoanType.setEditable(false);
+        
         textFieldEnterLoanAmount.setEditable(false);
         textFieldEnterInterest.setEditable(false);
     }
@@ -60,13 +60,12 @@ public class LoanCalcUI extends javax.swing.JFrame {
         userLoanAmount = new java.awt.TextField();
         textFieldLoanDuration = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
-        textFieldLoanType = new javax.swing.JTextField();
-        javax.swing.JComboBox<String> jComboBox2 = new javax.swing.JComboBox<>();
         javax.swing.JButton submitInfoButton = new javax.swing.JButton();
         textFieldLoanWithInterest = new javax.swing.JTextField();
         textFieldMonthly = new javax.swing.JTextField();
         textFieldTotalLoanWithInterest = new javax.swing.JTextField();
         textFieldMonthlyPayment = new javax.swing.JTextField();
+        notificationLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -106,7 +105,7 @@ public class LoanCalcUI extends javax.swing.JFrame {
         textFieldEnterInterest.setBackground(new java.awt.Color(240, 240, 240));
         textFieldEnterInterest.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         textFieldEnterInterest.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        textFieldEnterInterest.setText("Enter Interest Rate:");
+        textFieldEnterInterest.setText("Enter Interest Rate %:");
         textFieldEnterInterest.setBorder(null);
         textFieldEnterInterest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,7 +132,7 @@ public class LoanCalcUI extends javax.swing.JFrame {
         textFieldLoanDuration.setBackground(new java.awt.Color(240, 240, 240));
         textFieldLoanDuration.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         textFieldLoanDuration.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        textFieldLoanDuration.setText("Loan Duration:");
+        textFieldLoanDuration.setText("Loan Duration in Years:");
         textFieldLoanDuration.setBorder(null);
         textFieldLoanDuration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,19 +141,6 @@ public class LoanCalcUI extends javax.swing.JFrame {
         });
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
-
-        textFieldLoanType.setBackground(new java.awt.Color(240, 240, 240));
-        textFieldLoanType.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        textFieldLoanType.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        textFieldLoanType.setText("Select Loan Type:");
-        textFieldLoanType.setBorder(null);
-        textFieldLoanType.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldLoanTypeActionPerformed(evt);
-            }
-        });
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Home", "Auto" }));
 
         submitInfoButton.setBackground(new java.awt.Color(153, 255, 255));
         submitInfoButton.setText("Submit Information");
@@ -208,47 +194,51 @@ public class LoanCalcUI extends javax.swing.JFrame {
             }
         });
 
+        notificationLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        notificationLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        notificationLabel.setText("---");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(216, 216, 216)
-                .addComponent(budgieTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(240, 240, 240)
-                        .addComponent(budgieTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(72, Short.MAX_VALUE)
+                        .addContainerGap(73, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(textFieldEnterLoanAmount, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textFieldEnterInterest, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textFieldLoanType, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textFieldLoanDuration, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textFieldMonthly, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textFieldLoanWithInterest, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(5, 5, 5)
-                                .addComponent(submitInfoButton))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(userLoanAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox2, 0, 122, Short.MAX_VALUE)
-                                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(userInterestRate, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(60, 60, 60)
-                                        .addComponent(jLabel2))
-                                    .addComponent(textFieldMonthlyPayment, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(textFieldTotalLoanWithInterest, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                            .addComponent(userLoanAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userInterestRate, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldMonthlyPayment, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldTotalLoanWithInterest, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(59, 59, 59)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(240, 240, 240)
+                        .addComponent(budgieTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(216, 216, 216)
+                        .addComponent(budgieTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(112, 112, 112)
+                        .addComponent(notificationLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(227, 227, 227)
+                .addComponent(submitInfoButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -259,24 +249,20 @@ public class LoanCalcUI extends javax.swing.JFrame {
                 .addComponent(budgieTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(134, 134, 134))
+                        .addGap(65, 65, 65))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(textFieldLoanType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                        .addGap(45, 45, 45)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(textFieldLoanDuration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(25, 25, 25)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(userLoanAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textFieldEnterLoanAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(12, 12, 12)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(userInterestRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textFieldEnterInterest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(29, 29, 29)
@@ -287,9 +273,11 @@ public class LoanCalcUI extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(textFieldMonthly, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textFieldMonthlyPayment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(submitInfoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(notificationLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(submitInfoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
         );
 
         pack();
@@ -325,10 +313,6 @@ public class LoanCalcUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textFieldLoanDurationActionPerformed
 
-    private void textFieldLoanTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldLoanTypeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldLoanTypeActionPerformed
-
     private void submitInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitInfoButtonActionPerformed
         // TODO add your handling code here:
         loanCalculations();
@@ -358,20 +342,47 @@ public class LoanCalcUI extends javax.swing.JFrame {
         float totalInterest;
         float totalLoan;
         float monthlyCost;
+        boolean errorFlag = false;
         
         duration = (jComboBox1.getSelectedIndex() + 1) * 12;
         System.out.println(duration);
         loanAmountStr = userLoanAmount.getText();
         interestRateStr = userInterestRate.getText();
-        loanAmount = Float.valueOf(loanAmountStr);
-        interestRate = Float.valueOf(interestRateStr);
+        try{
+            loanAmount = Float.valueOf(loanAmountStr);
+            interestRate = Float.valueOf(interestRateStr);
+            if (loanAmount < 0 || interestRate < 0){
+                notificationLabel.setText("The entered value is negative. Please enter a new value.");
+            }
+            else if (loanAmount > 10000000){
+                notificationLabel.setText("The entered value is too high. Please enter a new value");
+            }
+            else if(interestRate > 100){
+                notificationLabel.setText("Interest rate needs to be a value between 0% and 100%");
+            }
+            else if (loanAmount >= 0 && interestRate >= 0){
+                notificationLabel.setText("Thank You");
+                errorFlag = true;
+            }
+            }
+        catch(Exception e){
+            notificationLabel.setText("Please enter a numerical value");
+        }
         
-        totalInterest = loanAmount * interestRate;
-        totalLoan = loanAmount + totalInterest;
-        monthlyCost = totalLoan/duration;
         
-        textFieldTotalLoanWithInterest.setText("$" + totalLoan);
-        textFieldMonthlyPayment.setText("$" + monthlyCost);
+        if (errorFlag == true){
+            loanAmount = Float.valueOf(loanAmountStr);
+            interestRate = Float.valueOf(interestRateStr);
+            totalInterest = loanAmount * (interestRate/100);
+            totalLoan = loanAmount + totalInterest;
+            monthlyCost = totalLoan/duration;
+            textFieldTotalLoanWithInterest.setText("$" + totalLoan);
+            textFieldMonthlyPayment.setText("$" + monthlyCost);
+        }
+        
+        
+        
+        
         
         
     }
@@ -415,10 +426,10 @@ public class LoanCalcUI extends javax.swing.JFrame {
     private javax.swing.JTextField budgieTitle2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel notificationLabel;
     private javax.swing.JTextField textFieldEnterInterest;
     private javax.swing.JTextField textFieldEnterLoanAmount;
     private javax.swing.JTextField textFieldLoanDuration;
-    private javax.swing.JTextField textFieldLoanType;
     private javax.swing.JTextField textFieldLoanWithInterest;
     private javax.swing.JTextField textFieldMonthly;
     private javax.swing.JTextField textFieldMonthlyPayment;
