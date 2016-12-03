@@ -1,3 +1,6 @@
+//CSE337 Project
+//Author:
+//Date:
 
 package budgieapp;
 
@@ -39,6 +42,8 @@ public class EnterFinancialInfo extends FinancialInfoUI{
                 
             //convert strings to numbers   
             //monthlyBillsStr = infoUI.textBills;
+            
+            //error trap for enter financial info use case.
             while(errorTrap == false){
                 
                 try{
