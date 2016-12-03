@@ -18,7 +18,11 @@ public class InformationSummaryUI extends javax.swing.JFrame {
     TransportationCost transCost = new TransportationCost();
     LoanCalcUI loanCalc = new LoanCalcUI();
     EnterFinancialInfo info = new EnterFinancialInfo();
-    public InformationSummaryUI() {
+    
+    public static InformationSummaryUI informationSummaryUI;
+    public InformationSummaryUI() 
+    {
+        informationSummaryUI = this;
         getContentPane().setBackground(Color.white);
         initComponents();
         budgieTitle1.setBackground(Color.white);

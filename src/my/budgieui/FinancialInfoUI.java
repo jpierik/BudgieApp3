@@ -26,8 +26,12 @@ public class FinancialInfoUI extends javax.swing.JFrame {
             
     public String submitTest;
     public boolean submitBool = false;
+    
+    public static FinancialInfoUI financialInfoUI;
     public FinancialInfoUI() {
+        
         getContentPane().setBackground(Color.white);
+        financialInfoUI = this;
         initComponents();
         budgieTitle1.setEditable(false);
         budgieTitle2.setEditable(false);
