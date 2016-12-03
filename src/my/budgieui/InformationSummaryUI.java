@@ -60,6 +60,7 @@ public class InformationSummaryUI extends javax.swing.JFrame {
         jLabelTotalMonthlyExpense = new javax.swing.JLabel();
         loanCalcButton = new javax.swing.JButton();
         transportationCostButton = new javax.swing.JButton();
+        transportationCostButton1 = new javax.swing.JButton();
 
         jLabelTotalIncome1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTotalIncome1.setText("---");
@@ -143,6 +144,14 @@ public class InformationSummaryUI extends javax.swing.JFrame {
             }
         });
 
+        transportationCostButton1.setBackground(new java.awt.Color(153, 255, 255));
+        transportationCostButton1.setText("Saver");
+        transportationCostButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transportationCostButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -177,7 +186,9 @@ public class InformationSummaryUI extends javax.swing.JFrame {
                 .addComponent(loanCalcButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(89, 89, 89)
                 .addComponent(transportationCostButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(transportationCostButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,7 +216,8 @@ public class InformationSummaryUI extends javax.swing.JFrame {
                 .addGap(83, 83, 83)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loanCalcButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(transportationCostButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(transportationCostButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(transportationCostButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -240,6 +252,11 @@ public class InformationSummaryUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         transCost.setVisible(true);
     }//GEN-LAST:event_transportationCostButtonActionPerformed
+
+    private void transportationCostButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transportationCostButton1ActionPerformed
+        new Saver().setVisible(true);
+                
+    }//GEN-LAST:event_transportationCostButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -289,5 +306,6 @@ public class InformationSummaryUI extends javax.swing.JFrame {
     private javax.swing.JTextField textFieldEnterIncome;
     private javax.swing.JTextField textFieldEnterLivingExpense;
     public javax.swing.JButton transportationCostButton;
+    public javax.swing.JButton transportationCostButton1;
     // End of variables declaration//GEN-END:variables
 }

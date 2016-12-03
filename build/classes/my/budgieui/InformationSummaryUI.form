@@ -75,6 +75,8 @@
               <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
               <Component id="transportationCostButton" min="-2" pref="150" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
+              <Component id="transportationCostButton1" min="-2" pref="150" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -110,6 +112,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="loanCalcButton" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                   <Component id="transportationCostButton" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                  <Component id="transportationCostButton1" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -277,6 +280,21 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="transportationCostButtonActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="false"/>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="transportationCostButton1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="99" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Saver"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="transportationCostButton1ActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="false"/>
