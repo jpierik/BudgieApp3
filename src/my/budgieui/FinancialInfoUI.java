@@ -66,6 +66,7 @@ public class FinancialInfoUI extends javax.swing.JFrame {
         userMonthlyBills = new java.awt.TextField();
         userMonthlyOtherExpense = new java.awt.TextField();
         jLabel2 = new javax.swing.JLabel();
+        notificationLabel = new javax.swing.JLabel();
 
         jLabel3.setText("jLabel3");
 
@@ -180,6 +181,11 @@ public class FinancialInfoUI extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/budgieapp/pictures/budgie bird.jpg"))); // NOI18N
 
+        notificationLabel.setBackground(new java.awt.Color(255, 255, 255));
+        notificationLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        notificationLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        notificationLabel.setText("---");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -213,6 +219,10 @@ public class FinancialInfoUI extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(submitButton)
                         .addGap(263, 263, 263))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(notificationLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -221,7 +231,7 @@ public class FinancialInfoUI extends javax.swing.JFrame {
                 .addComponent(budgieTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(budgieTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
@@ -241,7 +251,9 @@ public class FinancialInfoUI extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(userMonthlyOtherExpense, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textFieldEnterOtherExpense, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(72, 72, 72)
+                .addGap(45, 45, 45)
+                .addComponent(notificationLabel)
+                .addGap(18, 18, 18)
                 .addComponent(submitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(37, 37, 37))
         );
@@ -353,6 +365,7 @@ public class FinancialInfoUI extends javax.swing.JFrame {
     private javax.swing.JTextField budgieTitle2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    public javax.swing.JLabel notificationLabel;
     public javax.swing.JButton submitButton;
     private javax.swing.JTextField textFieldEnterBills;
     private javax.swing.JTextField textFieldEnterIncome;

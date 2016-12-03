@@ -17,6 +17,7 @@ public class EnterFinancialInfo extends FinancialInfoUI{
     String monthlyOtherExpenseStr;
     String monthlyLivingExpenseStr;
     boolean flag = false;
+    boolean errorTrap = false;
     
     float income;
     float bills;
@@ -37,11 +38,32 @@ public class EnterFinancialInfo extends FinancialInfoUI{
             if (infoUI.isVisible() && infoUI.submitBool == true){
                 
             //convert strings to numbers   
-            monthlyBillsStr = infoUI.textBills;
-            income = Float.valueOf(infoUI.textIncome);
-            bills = Float.valueOf(infoUI.textBills);
-            otherExpense = Float.valueOf(infoUI.textOtherExpense);
-            livingExpense = Float.valueOf(infoUI.textLivingExpense);
+            //monthlyBillsStr = infoUI.textBills;
+            while(errorTrap == false){
+                try{
+                income = Float.valueOf(infoUI.textIncome);
+                bills = Float.valueOf(infoUI.textBills);
+                otherExpense = Float.valueOf(infoUI.textOtherExpense);
+                livingExpense = Float.valueOf(infoUI.textLivingExpense);
+                }
+                catch(Exception e){
+                    System.out.println("Please enter a numerical value");
+                    infoUI.notificationLabel.setText("Please enter a numerical value.");
+                    infoUI.submitBool = false;
+                }
+                if(income < 0 || bills < 0 || otherExpense < 0 || livingExpense < 0){
+                    System.out.println("no negatives");
+                    infoUI.notificationLabel.setText("The entered value is negative. Please enter a new value.");
+                    infoUI.submitBool = false;
+                }
+                else if(income > 1000000 || bills > 1000000 || otherExpense > 1000000 || livingExpense > 1000000){
+                    System.out.println("no large numbers");
+                    infoUI.notificationLabel.setText("The entered value is too high. Please enter a new value");
+                    infoUI.submitBool = false;
+                }
+                else
+                    errorTrap = true;
+            }
             
             //simple calulations for financial info
             yearlyIncome = income * 12;
