@@ -254,7 +254,7 @@ public class InformationSummaryUI extends javax.swing.JFrame {
     }//GEN-LAST:event_transportationCostButtonActionPerformed
 
     private void transportationCostButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transportationCostButton1ActionPerformed
-        new Saver().setVisible(true);
+        //new Saver().setVisible(true);
                 
     }//GEN-LAST:event_transportationCostButton1ActionPerformed
 
