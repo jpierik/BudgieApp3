@@ -16,7 +16,9 @@ public class BudgieTest {
     
     public static void main(String[] args) {
         InformationSummaryUI infoSummary = new InformationSummaryUI();
+        infoSummary.setResizable(false);
         EnterFinancialInfo info = new EnterFinancialInfo();
+        info.infoUI.setResizable(false);
         LoanCalcUI loanCalc = new LoanCalcUI();
         info.infoUI.setVisible(true);
         info.getInputInfo();

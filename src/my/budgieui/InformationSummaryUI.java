@@ -28,6 +28,10 @@ public class InformationSummaryUI extends javax.swing.JFrame {
         loanCalc.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
         saver.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
         transCost.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
+        transCost.setResizable(false);
+        saver.setResizable(false);
+        loanCalc.setResizable(false);
+        
         
         getContentPane().setBackground(Color.white);
         initComponents();
