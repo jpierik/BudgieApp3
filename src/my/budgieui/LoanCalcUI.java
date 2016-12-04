@@ -34,6 +34,7 @@ public class LoanCalcUI extends javax.swing.JFrame {
         
         textFieldEnterLoanAmount.setEditable(false);
         textFieldEnterInterest.setEditable(false);
+        
     }
 
     /**

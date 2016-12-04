@@ -7,6 +7,7 @@ package my.budgieui;
 import budgieapp.EnterFinancialInfo;
 import budgieapp.TransportationCost;
 import java.awt.Color;
+import javax.swing.WindowConstants;
 /**
  *
  * @author jonpi
@@ -24,6 +25,10 @@ public class InformationSummaryUI extends javax.swing.JFrame {
     public InformationSummaryUI() 
     {
         informationSummaryUI = this;
+        loanCalc.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
+        saver.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
+        transCost.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
+        
         getContentPane().setBackground(Color.white);
         initComponents();
         budgieTitle1.setBackground(Color.white);
