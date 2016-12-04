@@ -18,6 +18,7 @@ public class InformationSummaryUI extends javax.swing.JFrame {
     TransportationCost transCost = new TransportationCost();
     LoanCalcUI loanCalc = new LoanCalcUI();
     EnterFinancialInfo info = new EnterFinancialInfo();
+    savingsUI saver = new savingsUI();
     
     public static InformationSummaryUI informationSummaryUI;
     public InformationSummaryUI() 
@@ -145,7 +146,7 @@ public class InformationSummaryUI extends javax.swing.JFrame {
         });
 
         transportationCostButton1.setBackground(new java.awt.Color(153, 255, 255));
-        transportationCostButton1.setText("Saver");
+        transportationCostButton1.setText("Savings Calculator");
         transportationCostButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 transportationCostButton1ActionPerformed(evt);
@@ -179,16 +180,15 @@ public class InformationSummaryUI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(245, 245, 245)
                         .addComponent(budgieTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(loanCalcButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(89, 89, 89)
+                        .addComponent(transportationCostButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(transportationCostButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(loanCalcButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(89, 89, 89)
-                .addComponent(transportationCostButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(transportationCostButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -255,7 +255,8 @@ public class InformationSummaryUI extends javax.swing.JFrame {
 
     private void transportationCostButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transportationCostButton1ActionPerformed
         //new Saver().setVisible(true);
-                
+        saver.setVisible(true);
+        
     }//GEN-LAST:event_transportationCostButton1ActionPerformed
 
     /**
