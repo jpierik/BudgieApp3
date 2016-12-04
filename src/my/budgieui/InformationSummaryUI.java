@@ -134,7 +134,8 @@ public class InformationSummaryUI extends javax.swing.JFrame {
         jLabelTotalMonthlyExpense.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTotalMonthlyExpense.setText("---");
 
-        loanCalcButton.setBackground(new java.awt.Color(153, 255, 255));
+        loanCalcButton.setBackground(new java.awt.Color(51, 204, 255));
+        loanCalcButton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         loanCalcButton.setText("Loan Calculator");
         loanCalcButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,7 +143,8 @@ public class InformationSummaryUI extends javax.swing.JFrame {
             }
         });
 
-        transportationCostButton.setBackground(new java.awt.Color(153, 255, 255));
+        transportationCostButton.setBackground(new java.awt.Color(51, 204, 255));
+        transportationCostButton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         transportationCostButton.setText("Transportation Cost");
         transportationCostButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,7 +152,8 @@ public class InformationSummaryUI extends javax.swing.JFrame {
             }
         });
 
-        transportationCostButton1.setBackground(new java.awt.Color(153, 255, 255));
+        transportationCostButton1.setBackground(new java.awt.Color(51, 204, 255));
+        transportationCostButton1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         transportationCostButton1.setText("Savings Calculator");
         transportationCostButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

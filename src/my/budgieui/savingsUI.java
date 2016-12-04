@@ -103,7 +103,7 @@ public class savingsUI extends javax.swing.JFrame {
         notificationLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         notificationLabel.setText("---");
 
-        submitButton.setBackground(new java.awt.Color(102, 255, 255));
+        submitButton.setBackground(new java.awt.Color(51, 204, 255));
         submitButton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         submitButton.setText("Submit Information");
         submitButton.addActionListener(new java.awt.event.ActionListener() {

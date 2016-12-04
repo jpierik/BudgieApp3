@@ -137,7 +137,8 @@ public class LoanCalcUI extends javax.swing.JFrame {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" }));
 
-        submitInfoButton.setBackground(new java.awt.Color(153, 255, 255));
+        submitInfoButton.setBackground(new java.awt.Color(51, 204, 255));
+        submitInfoButton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         submitInfoButton.setText("Submit Information");
         submitInfoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

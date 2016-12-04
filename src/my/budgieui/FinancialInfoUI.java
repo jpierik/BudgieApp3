@@ -101,8 +101,8 @@ public class FinancialInfoUI extends javax.swing.JFrame {
             }
         });
 
-        submitButton.setBackground(new java.awt.Color(153, 255, 255));
-        submitButton.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        submitButton.setBackground(new java.awt.Color(51, 204, 255));
+        submitButton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         submitButton.setText("Submit Information");
         submitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
